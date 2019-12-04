@@ -5,6 +5,7 @@ $pkg_maintainer="The Habitat Maintainers <humans@habitat.sh>"
 $pkg_license=@("Apache-2.0")
 $pkg_deps=@("core/dotnet-asp-core")
 $pkg_build_deps=@("core/dotnet-core-sdk")
+$pkg_exposes=@('port')
 
 function Invoke-SetupEnvironment {
   Set-RuntimeEnv "HAB_CONFIG_PATH" $pkg_svc_config_path
