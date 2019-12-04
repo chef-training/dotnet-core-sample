@@ -1,2 +1,2 @@
 cd {{pkg.svc_var_path}}
-dotnet {{pkg.name}}.dll
+dotnet {{pkg.name}}.dll --urls http://*:{{cfg.port}}
