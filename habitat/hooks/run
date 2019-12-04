@@ -1,2 +1,0 @@
-cd {{pkg.svc_var_path}}
-dotnet {{pkg.name}}.dll
