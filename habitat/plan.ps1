@@ -12,7 +12,8 @@ function Invoke-SetupEnvironment {
 }
 
 function Invoke-Build {
-  cp $PLAN_CONTEXT/../* $HAB_CACHE_SRC_PATH/$pkg_dirname -recurse -force -Exclude ".vagrant"
+  cp $PLAN_CONTEXT/../* $HAB_CACHE_SRC_PATH/$pkg_dirname -recurse -force
+  Copy-Item $pkg_svc_config_path/Index.cshtml.template $HAB_CACHE_SRC_PATH/$pkg_dirname/Pages/Index.cshtml
   & "$(Get-HabPackagePath dotnet-core-sdk)\bin\dotnet.exe" build
   if($LASTEXITCODE -ne 0) {
       Write-Error "dotnet build failed!"
