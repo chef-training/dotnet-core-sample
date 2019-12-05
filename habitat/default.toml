@@ -6,4 +6,4 @@ port = 8090
 
 [app]
 title = 'Chef Habitat'
-message = 'I love it when a <a href="https://habitat.sh">plan.sh</a> comes together.'
+message = 'I love it when a <a href="https://habitat.sh">plan.ps1</a> comes together.'
