@@ -1,5 +1,0 @@
-cd {{pkg.svc_var_path}}/Pages
-if(Test-Path Index.cshtml) { Remove-Item Index.cshtml -Force }
-New-Item -Name Index.cshtml -ItemType SymbolicLink -target "{{pkg.svc_config_path}}/Index.cshtml.template" -Force | Out-Null
-cd {{pkg.svc_var_path}}
-dotnet {{pkg.name}}.dll --urls http://*:{{cfg.port}}
