@@ -3,3 +3,7 @@
 # You can safely delete this file if you don't need it.
 
 port = 8090
+
+[app]
+title = 'Chef Habitat'
+message = 'I love it when a <a href="https://habitat.sh">plan.sh</a> comes together.'
