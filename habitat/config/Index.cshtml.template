@@ -1,0 +1,10 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">{{ cfg.app.title}}</h1>
+    <p>{{ cfg.app.message }}</p>
+</div>
