@@ -6,10 +6,6 @@ $pkg_license=@("Apache-2.0")
 $pkg_deps=@("core/dotnet-asp-core")
 $pkg_build_deps=@("core/dotnet-core-sdk")
 
-function Invoke-SetupEnvironment {
-  Set-RuntimeEnv "HAB_CONFIG_PATH" $pkg_svc_config_path
-}
-
 function Invoke-Build {
   cp $PLAN_CONTEXT/../* $HAB_CACHE_SRC_PATH/$pkg_dirname -recurse -force
   & "$(Get-HabPackagePath dotnet-core-sdk)\bin\dotnet.exe" build
